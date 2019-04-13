@@ -21,7 +21,7 @@ import (
 )
 
 func main() {
-	graceful.Worker("example", task)
+	graceful.Worker("tasks", task)
 }
 
 func task(wg *sync.WaitGroup) {

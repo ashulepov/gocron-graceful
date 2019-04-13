@@ -12,8 +12,6 @@ import (
 
 // Worker runs task worker
 func Worker(name string, task func(wg *sync.WaitGroup)) {
-	log.Printf("%s: starting", name)
-
 	wg := &sync.WaitGroup{}
 
 	task(wg)
@@ -22,6 +20,7 @@ func Worker(name string, task func(wg *sync.WaitGroup)) {
 	signal.Notify(signalChan, syscall.SIGINT, syscall.SIGTERM)
 
 	doneChan := gocron.Start()
+	log.Printf("%s: started", name)
 
 	<-signalChan
 
