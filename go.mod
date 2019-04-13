@@ -1,4 +1,4 @@
-module gocron-graceful
+module github.com/ashulepov/gocron-graceful
 
 go 1.12
 
