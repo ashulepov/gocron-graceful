@@ -13,10 +13,10 @@ go get github.com/ashulepov/gocron-graceful
 package main
 
 import (
-	"gocron-graceful"
 	"log"
 	"sync"
 
+	"github.com/ashulepov/gocron-graceful"
 	"github.com/jasonlvhit/gocron"
 )
 
