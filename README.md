@@ -41,3 +41,11 @@ func job2() {
 	log.Println("job 2")
 }
 ```
+
+## Testing
+Unit-tests:
+
+
+```
+go test -v
+```
